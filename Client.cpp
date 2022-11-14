@@ -30,5 +30,6 @@ string Client::getPhoneNumber() const {
 void Client::displayInfo() const {
     cout<<"Client Name:"<<getName()<<'\n';
     cout<<"Client Address:"<<getAddress()<<'\n';
+    cout<<"Client Address:"<<getPhoneNumber()<<'\n';
     account->displayInfo();
 }
