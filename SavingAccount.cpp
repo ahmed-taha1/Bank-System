@@ -7,15 +7,15 @@
 double SavingAccount::minimumBalance =1000;     // minimum balance account can hold
 double SavingAccount::minimumDepositAmount=100; // minimum amount to be deposited
 
-SavingAccount::SavingAccount(const string& ID,const double& amount): BankAccount(ID, max(minimumBalance, amount))
+SavingAccount::SavingAccount(const string& ID,double amount): BankAccount(ID, max(minimumBalance, amount))
 {}
 
-void SavingAccount::withdraw(const double &amount){
+void SavingAccount::withdraw(double amount){
     if(getBalance()-amount>=minimumBalance)        // check if transaction is possible
         BankAccount::withdraw(amount);           // delegate to parent class
 }
 
-void SavingAccount::deposit(const double &amount){
+void SavingAccount::deposit(double amount){
     if(amount>=minimumDepositAmount)          // check if transaction is possible
         BankAccount::deposit(amount);       // delegate to parent class
 }
