@@ -1,5 +1,5 @@
 //
-// Created by Ismail Magdy on 04/11/2022.
+// Created by Bjabotaha on 04/11/2022.
 //
 
 #ifndef BANKING_SYSTEM_CLIENT_H
@@ -13,8 +13,8 @@ using namespace std;
 class Client{
 public:
     // constructors
-    Client(const string& name, const string& address, const string& phoneNumber , BankAccount*);
-
+    Client(const string& name, const string& address, const string& phoneNumber , BankAccount* account);
+ 
     // getters
     string getName()const;
     string getAddress()const;
