@@ -9,12 +9,12 @@
 class SavingAccount:public BankAccount{
 public:
     // constructor
-    SavingAccount(const string& ID,const double& amount);
+    SavingAccount(const string& ID,double amount);
     virtual ~SavingAccount() = default;
 
     // overridden transaction
-    virtual void withdraw(const double& amount)override;
-    virtual void deposit(const double& amount)override;
+    virtual void withdraw(double amount)override;
+    virtual void deposit(double amount)override;
 
     // displaying information
     virtual void displayInfo()const override;
