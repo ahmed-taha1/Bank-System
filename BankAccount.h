@@ -13,7 +13,7 @@ class BankAccount {
 public:
 
     // constructor
-    BankAccount(const string& ID, const double& balance = 0 );
+    BankAccount(string ID,double balance = 0 );
     // destructor
     virtual ~BankAccount() = default;
 
@@ -22,8 +22,8 @@ public:
     double getBalance() const;
 
     // account transactions
-    virtual void withdraw(const double& amount);
-    virtual void deposit(const double& amount);
+    virtual void withdraw(double amount);
+    virtual void deposit(double amount);
 
     // displaying Info
     virtual void displayInfo()const;
