@@ -16,8 +16,6 @@ int BankApplication::EXIT = 5;
 int BankApplication::MinDepositAmount = 100;
 int BankApplication::MinSavingBalance = 1000;
 
-BankApplication::BankApplication() {}
-
 BankApplication::~BankApplication() {
     // deallocating memory
     for(const auto& i:accounts){
@@ -29,6 +27,7 @@ BankApplication::~BankApplication() {
         delete i;
     }
 }
+
 
 void BankApplication::run() {
     while (true){
@@ -61,7 +60,7 @@ int BankApplication::mainMenu()const{
     return choice;
 }
 
-void BankApplication::performChoice(const int& choice){
+void BankApplication::performChoice(int choice){
     // perform operation chosen
     if(choice == CreateNewAccount){
         addAccount();
@@ -218,7 +217,7 @@ void BankApplication::createNewClient(){
     cin>>phoneNumber;
 
     // create a new account for the client
-    BankAccount* account = creatNewAccount();
+    BankAccount* account = creatNewAccount(); //**************************** what the use of this variable
 
     // create and store the new client Info
     Client* newClient  = new Client(name,address,phoneNumber,account);
