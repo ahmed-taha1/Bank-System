@@ -5,9 +5,9 @@
 #include "BankAccount.h"
 
 
-BankAccount::BankAccount(const string& ID, const double &balance) {
-    if(balance>=0)
-        this->balance = balance;
+BankAccount::BankAccount(string ID, double Balance) {
+    if(Balance>=0)
+        this->balance = Balance;
     else
         this->balance = 0 ;
     this->accountID = ID;
@@ -22,12 +22,12 @@ double BankAccount::getBalance()const{
 }
 
 
-void BankAccount::withdraw(const double &amount) {
+void BankAccount::withdraw(double amount) {
     if(amount<=balance)
         this->balance -= amount;
 }
 
-void BankAccount::deposit(const double &amount) {
+void BankAccount::deposit(double amount) {
     this->balance += amount;
 }
 
