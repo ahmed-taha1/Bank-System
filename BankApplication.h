@@ -15,7 +15,6 @@ using namespace std;
 
 class BankApplication {
 public:
-     BankApplication();
     ~BankApplication();
     void run();
 private:
@@ -38,7 +37,7 @@ private:
 
     void welcomeMessage()const;
     int  mainMenu()const;
-    void performChoice(const int& choice);
+    void performChoice(int choice);
     void deposit();
     void withdraw();
     void addAccount();
@@ -47,8 +46,6 @@ private:
     void  createNewClient(); // utility function
     BankAccount* creatNewAccount();// utility function
     BankAccount* findAccount(const string &ID)const;// utility function
-
-
 };
 
 
